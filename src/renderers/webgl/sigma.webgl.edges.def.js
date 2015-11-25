@@ -23,6 +23,7 @@
           y2 = target[prefix + 'y'],
           color = edge.color;
 
+
       if (!color)
         switch (settings('edgeColor')) {
           case 'source':
@@ -230,7 +231,7 @@
             'color.b = mod(c, 256.0); c = floor(c / 256.0);',
             'color.g = mod(c, 256.0); c = floor(c / 256.0);',
             'color.r = mod(c, 256.0); c = floor(c / 256.0); color /= 255.0;',
-            'color.a = 1.0;',
+            'color.a = 0.8;',
           '}'
         ].join('\n'),
         gl.VERTEX_SHADER

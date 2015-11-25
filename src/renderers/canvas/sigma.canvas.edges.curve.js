@@ -19,6 +19,7 @@
         edgeColor = settings('edgeColor'),
         defaultNodeColor = settings('defaultNodeColor'),
         defaultEdgeColor = settings('defaultEdgeColor'),
+        defaultEdgeAlpha = settings('defaultEdgeAlpha'),
         cp = {},
         sSize = source[prefix + 'size'],
         sX = source[prefix + 'x'],
@@ -45,6 +46,7 @@
 
     context.strokeStyle = color;
     context.lineWidth = size;
+    context.globalAlpha = defaultEdgeAlpha || 1;
     context.beginPath();
     context.moveTo(sX, sY);
     if (source.id === target.id) {

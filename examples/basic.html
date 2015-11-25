@@ -93,12 +93,19 @@ for (i = 0; i < E; i++)
     source: 'n' + (Math.random() * N | 0),
     target: 'n' + (Math.random() * N | 0),
     size: Math.random(),
-    color: '#ccc'
+    color: '#777'
   });
 
 // Instantiate sigma:
-s = new sigma({
+window.s = new sigma({
   graph: g,
-  container: 'graph-container'
+  renderers: [{
+    container: 'graph-container',
+    type: 'svg'
+  }],
+  settings: {
+    hideEdgesOnMove: true
+  }
 });
+
 </script>

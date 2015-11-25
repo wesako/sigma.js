@@ -19,6 +19,7 @@
         edgeColor = settings('edgeColor'),
         defaultNodeColor = settings('defaultNodeColor'),
         defaultEdgeColor = settings('defaultEdgeColor');
+        defaultEdgeAlpha = settings('defaultEdgeAlpha'),
 
     if (!color)
       switch (edgeColor) {
@@ -35,6 +36,7 @@
 
     context.strokeStyle = color;
     context.lineWidth = size;
+    context.globalAlpha = defaultEdgeAlpha || 1;
     context.beginPath();
     context.moveTo(
       source[prefix + 'x'],

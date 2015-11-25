@@ -175,6 +175,16 @@
         var inertiaRatio = _settings('touchInertiaRatio');
 
         if (_movingTimeoutId) {
+          if (_isMoving) {
+            if (typeof window.touchRefreshTimeout === 'undefined') {
+              setTimeout(function() {
+                window.s.renderCamera(_camera);
+              }, 75);
+              window.touchRefreshTimeout = setTimeout(function() {
+                  delete window.touchRefreshTimeout;
+              }, 250);
+            }
+          }
           _isMoving = false;
           clearTimeout(_movingTimeoutId);
         }
