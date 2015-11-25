@@ -18,8 +18,8 @@
         size = edge[prefix + 'size'] || 1,
         edgeColor = settings('edgeColor'),
         defaultNodeColor = settings('defaultNodeColor'),
-        defaultEdgeColor = settings('defaultEdgeColor');
-        defaultEdgeAlpha = settings('defaultEdgeAlpha'),
+        defaultEdgeColor = settings('defaultEdgeColor'),
+        defaultEdgeAlpha = settings('defaultEdgeAlpha');
 
     if (!color)
       switch (edgeColor) {
