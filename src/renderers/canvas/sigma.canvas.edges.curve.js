@@ -44,9 +44,13 @@
           break;
       }
 
+    if (edge.highlighted) {
+      size = 1;
+    }
+
     context.strokeStyle = color;
     context.lineWidth = size;
-    context.globalAlpha = defaultEdgeAlpha || 1;
+    context.globalAlpha = edge.alpha || defaultEdgeAlpha || 1;
     context.beginPath();
     context.moveTo(sX, sY);
     if (source.id === target.id) {
