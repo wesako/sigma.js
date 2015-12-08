@@ -21,7 +21,8 @@
           prefix = settings('prefix') || '',
           edgeColor = settings('edgeColor'),
           defaultNodeColor = settings('defaultNodeColor'),
-          defaultEdgeColor = settings('defaultEdgeColor');
+          defaultEdgeColor = settings('defaultEdgeColor'),
+          defaultEdgeAlpha = settings('defaultEdgeAlpha');
 
       if (!color)
         switch (edgeColor) {
@@ -59,6 +60,7 @@
       var prefix = settings('prefix') || '';
 
       path.setAttributeNS(null, 'stroke-width', edge[prefix + 'size'] || 1);
+      path.setAttributeNS(null, 'stroke-opacity', edge[prefix + 'alpha'] || defaultEdgeAlpha || 1);
 
       // Control point
       var cx = (source[prefix + 'x'] + target[prefix + 'x']) / 2 +
