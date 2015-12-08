@@ -237,7 +237,7 @@
           source = nodes(a[i].source);
           target = nodes(a[i].target);
 
-          e = (renderers[a[i].type] || renderers.def).create(
+          e = (renderers[a[i].type] || renderers.curve).create(
             a[i],
             source,
             target,
@@ -255,7 +255,7 @@
         source = nodes(a[i].source);
         target = nodes(a[i].target);
 
-        (renderers[a[i].type] || renderers.def).update(
+        (renderers[a[i].type] || renderers.curve).update(
           a[i],
           this.domElements.edges[a[i].id],
           source,

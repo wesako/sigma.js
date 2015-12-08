@@ -182,7 +182,7 @@
               }, 75);
               window.touchRefreshTimeout = setTimeout(function() {
                   delete window.touchRefreshTimeout;
-              }, 250);
+              }, 175);
             }
           }
           _isMoving = false;

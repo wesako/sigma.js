@@ -14,6 +14,7 @@
     var prefix = settings('prefix') || '';
 
     context.fillStyle = node.color || settings('defaultNodeColor');
+    context.globalAlpha = node.alpha || settings('defaultNodeAlpha') || 1;
     context.beginPath();
     context.arc(
       node[prefix + 'x'],
