@@ -27,5 +27,22 @@
 
     context.closePath();
     context.fill();
+
+    if (node.hasBorder) {
+      context.beginPath();
+      context.strokeStyle = settings('nodeBorderColor') === 'node' ?
+        (node.color || settings('defaultNodeColor')) :
+        settings('defaultNodeBorderColor');
+      context.arc(
+        node[prefix + 'x'],
+        node[prefix + 'y'],
+        node[prefix + 'size'] + settings('borderSize'),
+        0,
+        Math.PI * 2,
+        true
+      );
+      context.closePath();
+      context.stroke();
+    }
   };
 })();
