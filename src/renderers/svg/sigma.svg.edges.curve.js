@@ -60,7 +60,11 @@
       var prefix = settings('prefix') || '';
 
       path.setAttributeNS(null, 'stroke-width', edge[prefix + 'size'] || 1);
-      path.setAttributeNS(null, 'stroke-opacity', edge[prefix + 'alpha'] || defaultEdgeAlpha || 1);
+      path.setAttributeNS(
+        null,
+        'stroke-opacity',
+        edge[prefix + 'alpha'] || defaultEdgeAlpha || 1
+      );
 
       // Control point
       var cx = (source[prefix + 'x'] + target[prefix + 'x']) / 2 +
