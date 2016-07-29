@@ -4,3 +4,4 @@ build/*
 *.log
 *.swp
 data*.js
+.DS_Store
